@@ -1,5 +1,5 @@
 <?php
-class  user extends core
+class user extends core
 {
 /**
  * لتركيب القالب على الصفحة بداية
@@ -8,10 +8,9 @@ class  user extends core
  */
     public function masterPageStart()
     {
-        $this->master('المستخدمين', '../../public/includes/header', '../../public/includes/footer', '../../public/template/');
+        $this->master('المستخدمين', '../../public/includes/header', '../../public/includes/footer', '../../public/template/', '../../public/views/');
         $this->startSection();
     }
-
 /**
  * لتركيب القالب على الصفحة نهاية
  *
@@ -20,5 +19,14 @@ class  user extends core
     public function masterPageEnd()
     {
         $this->endSection();
+    }
+    /**
+     * محتوى الصفحة
+     *
+     * @return void
+     */
+    public function content()
+    {
+
     }
 };

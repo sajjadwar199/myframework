@@ -90,10 +90,10 @@
                     UI Elements
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="<?php  echo urlDir; ?>index.php"><i class="icon-pie-chart"></i> التصنيفات</a>
+                    <a class="nav-link" href="<?php  echo urlDir; ?>category/index.php"><i class="icon-pie-chart"></i> التصنيفات</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php  echo urlDir; ?>edit.php"><i class="icon-pie-chart"></i> المقالات</a>
+                    <a class="nav-link" href="<?php  echo urlDir; ?>users/index.php"><i class="icon-pie-chart"></i> المقالات</a>
                 </li>
             </ul>
         </nav>
