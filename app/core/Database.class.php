@@ -5,7 +5,7 @@ class TheDatabase
   private $localhost = 'localhost';
   private $username = 'root';
   private $password = '';
-  public $database = 'classroom_reservat';
+  public $database = 'ajax';
   protected $con;
   protected $update_array = [];
     /**
