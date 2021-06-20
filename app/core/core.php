@@ -1,13 +1,11 @@
 <?php
-require 'ajax.class.php' ;
-class core  extends ajaxx{
+require 'formsMaker.class.php' ;
+class core  extends formsMaker{
 /* الكلاس الرئيسي */
  /*
  * هذه هي مكتبة بسيطة من تصميم سجاد عبد الكريم
  *
  */
-
-
 
 
 };

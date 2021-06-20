@@ -2,10 +2,10 @@
 session_start();
 class TheDatabase
 {
-  private $localhost = 'localhost';
+  private $host = 'localhost';
   private $username = 'root';
   private $password = '';
-  public $database = 'ajax';
+  public $database = 'test';
   protected $con;
   protected $update_array = [];
     /**
@@ -99,7 +99,7 @@ class TheDatabase
    */
   public function connectPdo()
   {
-    $connect = new PDO("mysql:host=" . $this->localhost . ";dbname=" . $this->database, $this->username, $this->password);
+    $connect = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->database, $this->username, $this->password);
     return $connect;
   }
   /**
@@ -108,7 +108,7 @@ class TheDatabase
    */
   public function connect()
   {
-    $con = mysqli_connect($this->localhost, $this->username, $this->password, $this->database);
+    $con = mysqli_connect($this->host, $this->username, $this->password, $this->database);
     mysqli_set_charset($con, "utf8");
     if (!$con) {
       echo "لم يتم الاتصال";
