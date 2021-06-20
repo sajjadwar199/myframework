@@ -147,4 +147,16 @@ class formsMaker extends ajaxx
         $input .= '</div>';
         echo $input;
     }
+     /** button submit
+        @param[string] $name ex.. send
+        @param[string]  $typeColor ex.. success,warning
+        @param[string]  $btnName ex.. اسم الزر مثل ارسال 
+     */
+    public function buttonSubmit($name,$btnName,$typeColor='success')
+    {
+        $btn = "<button type='submit' name='$name' class='btn btn-$typeColor'> ";
+        $btn.="$btnName";
+        $btn.= '</button>';
+        echo $btn;
+    }
 };
