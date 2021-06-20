@@ -102,16 +102,16 @@ class formsMaker extends ajaxx
     }
     /**
      * select input 
-     * @param[array] $options  ex.. apple,banana
+     * @param[array] $options  ex.. ['الاسم بلعربي'=>"name" ,'age'=>'1']
      *  @param[string] $selectedOption  ex..   please select this 
      *  @param[string] $name  ex..   fruts
      */
-    public function selectInput($name, $selectedOption, $options = array())
+    public function selectInput($name,$options = array(),$selectedOption)
     {
         echo "<select name='$name' class='form-control' aria-label='Default select example'>";
         $input = "<option selected disabled>$selectedOption</option>";
-        foreach ($options as $op) {
-            $input .= "<option value='$op' type='text' class='form-control'/>$op</option>";
+        foreach ($options as $key=>$value) {
+            $input .= "<option value='$value' type='text' class='form-control'/>$key</option>";
         }
         echo $input;
         echo '</select>';
@@ -135,14 +135,14 @@ class formsMaker extends ajaxx
      * radio input 
      * $attrs      وظيفة المتغير هي اذا كانت هناك خصائص اخرى يمكن اضافتها مثل  
      * @param[string] $name  ex..   fruts
-     * @param[array] $options  ex..   ['apple','banana','tomato']  
+     * @param[array] $options  ex..  ['الاسم بلعربي'=>"name" ,'age'=>'1']
      */
     public function radioInput($name, $options = array(), $attrs = null)
     {
         $input = "<div class='form-check form-check-inline'> ";
-        foreach ($options as $op) {
-            $input .= "<input class='form-check-input' type='radio' name='$name' id='inlineRadio1' value='$op'>";
-            $input .= "<label class='form-check-label' for='inlineRadio1'>$op</label> ";
+        foreach ($options as $key=>$value) {
+            $input .= "<input class='form-check-input' type='radio' name='$name' id='inlineRadio1' value='$value'>";
+            $input .= "<label class='form-check-label' for='inlineRadio1'>$key</label> ";
         }
         $input .= '</div>';
         echo $input;
